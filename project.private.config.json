@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "榜单详情",
+          "pathName": "pages/renking/renking",
+          "query": "id=19723756",
+          "scene": null
+        },
+        {
+          "name": "i",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "歌曲搜索列表",
+          "pathName": "pages/musicListDetail/musicListDetail",
+          "query": "keyword=%E5%93%AA%E9%87%8C%E9%83%BD%E6%98%AF%E4%BD%A0",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

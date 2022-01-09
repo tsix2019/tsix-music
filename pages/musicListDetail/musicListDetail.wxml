@@ -1,0 +1,15 @@
+<!-- pages/musicListDetail/musicListDetail.wxml -->
+<view class="music-list-detail">
+  <searchInput></searchInput>
+  <view class="music-list">
+    <navigator class="music-item" wx:for="{{musicDetailList}}" wx:for-item="item" wx:key="id" url="/pages/playPage/playPage?id={{item.id}}&name={{item.name}}">
+      <view class="music-info">
+        <view class="music-name">{{item.name}}</view>
+        <view class="sing-name" wx:for="{{item.artists}}" wx:for-item="item2" wx:key="id">
+          {{item2.name}}
+        </view>
+      </view>
+      <i class="iconfont icon-bofang"></i>
+    </navigator>
+  </view>
+</view>

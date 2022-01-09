@@ -1,23 +1,31 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <!-- 用户登录 -->
+  <view class="login-wrap">
+    <view class="login-left">
+      <i class="iconfont LC_icon_user_fill_3 .icon-LC_icon_user_fill_3" wx:if="{{!avatarUrl}}"></i>
+      <image src="{{avatarUrl}}" wx:else />
+      <view class="login-status">{{nickName?nickName:'未登录'}}</view>
+    </view>
+    <view class="login-right">
+      <view bindtap="goLogin">立即登录</view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <!-- 搜索 -->
+  <searchInput></searchInput>
+  <!-- 图片 bnnner -->
+  <view class="banner">
+    <image src="../../static/img/banner.jpg" />
+  </view>
+  <!-- 各种排行榜 -->
+  <view class="ranking-wrap">
+    <navigator class="ranking-detail" wx:for="{{renkingList}}" wx:key="id" wx:for-item="item" url="/pages/renking/renking?id={{item.id}}">
+      <image src="{{item.coverImgUrl}}" />
+      <view>
+        <view wx:for="{{item.tracks}}" wx:key="first" wx:for-index="index" wx:for-item="item2">
+          {{index+1}}. {{item2.first}} - {{item2.second}}
+        </view>
+      </view>
+    </navigator>
   </view>
 </view>

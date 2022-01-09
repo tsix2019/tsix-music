@@ -1,0 +1,88 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  .login-wrap {
+    color: #ccc;
+    display: flex;
+    font-size: 26rpx;
+    justify-content: space-between;
+    align-items: center;
+
+    .login-left {
+      display: flex;
+      align-items: center;
+
+      i {
+        padding-right: 20rpx;
+      }
+
+      image {
+        width: 60rpx;
+        height: 60rpx;
+        border-radius: 60rpx;
+        margin-right: 20rpx;
+      }
+
+      .login-status {}
+    }
+
+    .login-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150rpx;
+      height: 60rpx;
+      color: #666;
+      border: 1rpx #eee solid;
+      border-radius: 40rpx;
+    }
+  }
+
+
+
+  .banner {
+    margin-top: 30rpx;
+    display: flex;
+    justify-content: center;
+
+    image {
+      border-radius: 10rpx;
+      height: 250rpx;
+    }
+  }
+
+  .ranking-wrap {
+    .ranking-detail {
+      margin-top: 20rpx;
+      display: flex;
+
+      image {
+        width: 220rpx;
+        height: 220rpx;
+        border-radius: 8px;
+      }
+
+      view {
+        margin-left: 20rpx;
+
+        view {
+          color: #666;
+          //多行超出隐藏
+          width: 350rpx;
+          display: -webkit-box;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          font-size: 28rpx; //自适应字体
+          overflow: hidden;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1; //设置 需要显示的行数
+        }
+      }
+    }
+  }
+}
+
+.red {
+  color: red;
+}

@@ -1,0 +1,4 @@
+<!-- components/searchInput/searchInput.wxml -->
+<navigator url="/pages/search/search" class="search-wrap">
+  <input class="search-input" placeholder="搜索歌曲" focus></input>
+</navigator>

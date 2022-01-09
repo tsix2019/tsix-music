@@ -1,19 +1,69 @@
-/**index.wxss**/
-.userinfo {
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container .login-wrap {
+  color: #ccc;
   display: flex;
-  flex-direction: column;
+  font-size: 26rpx;
+  justify-content: space-between;
   align-items: center;
-  color: #aaa;
 }
-
-.userinfo-avatar {
+.container .login-wrap .login-left {
+  display: flex;
+  align-items: center;
+}
+.container .login-wrap .login-left i {
+  padding-right: 20rpx;
+}
+.container .login-wrap .login-left image {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  margin-right: 20rpx;
+}
+.container .login-wrap .login-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150rpx;
+  height: 60rpx;
+  color: #666;
+  border: 1rpx #eee solid;
+  border-radius: 40rpx;
+}
+.container .banner {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.container .banner image {
+  border-radius: 10rpx;
+  height: 250rpx;
+}
+.container .ranking-wrap .ranking-detail {
+  margin-top: 20rpx;
+  display: flex;
+}
+.container .ranking-wrap .ranking-detail image {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 8px;
+}
+.container .ranking-wrap .ranking-detail view {
+  margin-left: 20rpx;
+}
+.container .ranking-wrap .ranking-detail view view {
+  color: #666;
+  width: 350rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
   overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
-
-.usermotto {
-  margin-top: 200px;
+.red {
+  color: red;
 }

@@ -2,5 +2,5 @@
   "usingComponents": {
     "searchInput": "/components/searchInput/searchInput"
   },
-  "navigationBarTitleText": "TsixMusic"
+  "navigationBarTitleText": "搜索结果"
 }

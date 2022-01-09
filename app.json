@@ -1,13 +1,21 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/renking/renking",
+    "pages/playPage/playPage",
+    "pages/search/search",
+    "pages/musicListDetail/musicListDetail",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

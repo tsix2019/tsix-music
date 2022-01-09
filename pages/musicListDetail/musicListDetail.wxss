@@ -1,0 +1,29 @@
+.music-list-detail {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.music-list-detail .music-list .music-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.music-list-detail .music-list .music-item .music-info {
+  padding: 20rpx 0;
+}
+
+.music-list-detail .music-list .music-item .music-info .music-name {
+  color: #065ea4;
+  font-size: 36rpx;
+}
+
+.music-list-detail .music-list .music-item .music-info .sing-name {
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+.music-list-detail .music-list .music-item .iconfont {
+  color: #ccc;
+}
