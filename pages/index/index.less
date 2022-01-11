@@ -24,7 +24,6 @@
         margin-right: 20rpx;
       }
 
-      .login-status {}
     }
 
     .login-right {
@@ -39,6 +38,66 @@
     }
   }
 
+  .page-section-spacing {
+    margin-top: 20rpx;
+
+    .scroll-view_H {
+      white-space: nowrap;
+      .scroll-view-item_H {
+        display: inline-block;
+        width: 100%;
+        border-radius: 10rpx;
+        height: 100%;
+        overflow: hidden;
+
+        .ranking-wrap {
+          height: 65vh;
+          white-space: normal;
+          .ranking-detail {
+            margin-top: 20rpx;
+            display: flex;
+
+            image {
+              width: 220rpx;
+              height: 220rpx;
+              border-radius: 8px;
+            }
+
+            view {
+              margin-left: 20rpx;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+
+              view {
+                color: #666;
+                //多行超出隐藏
+                width: 350rpx;
+                display: -webkit-box;
+                word-break: break-all;
+                text-overflow: ellipsis;
+                font-size: 28rpx; //自适应字体
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1; //设置 需要显示的行数
+              }
+            }
+
+          }
+          .ranking-detail2{
+            display: inline-block;
+            image{
+              width: 12vh;
+              height: 12vh;
+              border-radius: 8px;
+              margin: 0 0.7vh;
+            }
+          }
+        }
+
+      }
+    }
+  }
 
 
   .banner {
@@ -51,38 +110,4 @@
       height: 250rpx;
     }
   }
-
-  .ranking-wrap {
-    .ranking-detail {
-      margin-top: 20rpx;
-      display: flex;
-
-      image {
-        width: 220rpx;
-        height: 220rpx;
-        border-radius: 8px;
-      }
-
-      view {
-        margin-left: 20rpx;
-
-        view {
-          color: #666;
-          //多行超出隐藏
-          width: 350rpx;
-          display: -webkit-box;
-          word-break: break-all;
-          text-overflow: ellipsis;
-          font-size: 28rpx; //自适应字体
-          overflow: hidden;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 1; //设置 需要显示的行数
-        }
-      }
-    }
-  }
-}
-
-.red {
-  color: red;
 }

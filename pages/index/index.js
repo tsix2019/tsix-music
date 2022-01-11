@@ -4,6 +4,7 @@ import { request } from "../../utils/request";
 Page({
   data: {
     renkingList: [],
+    renkingMore:[],
     nickName: "",
     avatarUrl: "",
   },
@@ -17,8 +18,11 @@ Page({
         url: "/toplist/detail",
       });
       if (data && data.code === 200) {
+         let tmpList = data.list.splice(4) // 保留前4个用于滑动第一页
+         // splice 会改变原来的数组 
         this.setData({
           renkingList: data.list,
+          renkingMore:tmpList
         });
       }
     } catch (err) {

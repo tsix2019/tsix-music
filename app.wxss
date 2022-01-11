@@ -1,4 +1,4 @@
-@import './utils/iconfont.wxss'
+@import './utils/iconfont.wxss';
 
 .iconfont {
   font-size: 60rpx;

@@ -1,0 +1,8 @@
+<!-- components/navBar.wxml -->
+<view class="nav-bar" style="background-image:url({{backImgUrl}})">
+  <view class="icon-wrap">
+    <i class="iconfont icon-fanhui" bindtap="goBack"></i>
+    |
+    <i class="iconfont icon-zhuye" bindtap="goHome"></i>
+  </view>
+</view>

@@ -32,28 +32,39 @@
   border: 1rpx #eee solid;
   border-radius: 40rpx;
 }
-.container .banner {
-  margin-top: 30rpx;
-  display: flex;
-  justify-content: center;
+.container .page-section-spacing {
+  margin-top: 20rpx;
 }
-.container .banner image {
+.container .page-section-spacing .scroll-view_H {
+  white-space: nowrap;
+}
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H {
+  display: inline-block;
+  width: 100%;
   border-radius: 10rpx;
-  height: 250rpx;
+  height: 100%;
+  overflow: hidden;
 }
-.container .ranking-wrap .ranking-detail {
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap {
+  height: 65vh;
+  white-space: normal;
+}
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap .ranking-detail {
   margin-top: 20rpx;
   display: flex;
 }
-.container .ranking-wrap .ranking-detail image {
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap .ranking-detail image {
   width: 220rpx;
   height: 220rpx;
   border-radius: 8px;
 }
-.container .ranking-wrap .ranking-detail view {
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap .ranking-detail view {
   margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.container .ranking-wrap .ranking-detail view view {
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap .ranking-detail view view {
   color: #666;
   width: 350rpx;
   display: -webkit-box;
@@ -64,6 +75,21 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
-.red {
-  color: red;
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap .ranking-detail2 {
+  display: inline-block;
+}
+.container .page-section-spacing .scroll-view_H .scroll-view-item_H .ranking-wrap .ranking-detail2 image {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 8px;
+  margin: 0 0.7vh;
+}
+.container .banner {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+}
+.container .banner image {
+  border-radius: 10rpx;
+  height: 250rpx;
 }

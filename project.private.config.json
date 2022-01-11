@@ -35,6 +35,12 @@
           "pathName": "pages/musicListDetail/musicListDetail",
           "query": "keyword=%E5%93%AA%E9%87%8C%E9%83%BD%E6%98%AF%E4%BD%A0",
           "scene": null
+        },
+        {
+          "name": "音乐播放页",
+          "pathName": "pages/playPage/playPage",
+          "query": "id=1909955412&name=%E4%BB%8E%E9%82%A3%E5%A4%A9%E8%B5%B7",
+          "scene": null
         }
       ]
     }

@@ -1,11 +1,15 @@
 <!-- pages/renking/renking.wxml -->
 <view class="renking">
+  <navBar backImgUrl="{{rankingInfo.coverImgUrl}}" />
   <view class="bg-wrap">
-    <image src="{{rankingInfo.coverImgUrl}}" class="bg-img" />
+    <view style="background:url({{rankingInfo.coverImgUrl}})" src="{{}}" class="bg-img" />
     <image src="{{rankingInfo.coverImgUrl}}" class="logo" />
     <view class="info">
       <view class="title">{{rankingInfo.name}}</view>
-      <view class="rc">网易云音乐</view>
+      <view class="rc">
+        <image src="/static/img/wangyi-music-icon.png" />
+        网易云音乐
+      </view>
       <view class="introduce">{{rankingInfo.description}}</view>
     </view>
   </view>

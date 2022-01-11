@@ -1,12 +1,13 @@
 .renking {
+  margin-top: 138rpx;
   .bg-wrap {
     color: #fff;
-    height: 650rpx;
+    height: 500rpx;
     width: 100%;
     display: flex;
-
     .bg-img {
       position: absolute;
+      filter: blur(2rpx);
       height: 650rpx;
       width: 100%;
       z-index: -1;
@@ -27,8 +28,15 @@
       }
 
       .rc {
+        display: flex;
+        align-items: center;
         font-size: 30rpx;
         margin: 50rpx 0;
+        image{
+          width: 45rpx;
+          height: 45rpx;
+          margin-right: 15rpx;
+        }
       }
 
       .introduce {
@@ -42,7 +50,7 @@
   .renking-detail {
     width: 100%;
     position: absolute;
-    top: 600rpx;
+    top: 620rpx;
     background-color: #fff;
     border-top-left-radius: 40rpx;
     border-top-right-radius: 40rpx;
@@ -51,9 +59,6 @@
       width: 80%;
       margin: 20rpx auto;
 
-      .iconfont {
-        // margin: 100rpx 20rpx 0 30rpx;
-      }
 
       font-size: 38rpx;
     }

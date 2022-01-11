@@ -40,7 +40,7 @@ Page({
       fail(){
         wx.setStorage({
           key: "his",
-          data: keyword,
+          data: [keyword],
         });
       }
     });

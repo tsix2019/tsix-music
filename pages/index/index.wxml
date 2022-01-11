@@ -17,15 +17,28 @@
   <view class="banner">
     <image src="../../static/img/banner.jpg" />
   </view>
-  <!-- 各种排行榜 -->
-  <view class="ranking-wrap">
-    <navigator class="ranking-detail" wx:for="{{renkingList}}" wx:key="id" wx:for-item="item" url="/pages/renking/renking?id={{item.id}}">
-      <image src="{{item.coverImgUrl}}" />
-      <view>
-        <view wx:for="{{item.tracks}}" wx:key="first" wx:for-index="index" wx:for-item="item2">
-          {{index+1}}. {{item2.first}} - {{item2.second}}
+  <!-- 左右滑动分页 -->
+  <view class="page-section-spacing">
+    <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+      <view id="demo1" class="scroll-view-item_H demo-text-1">
+        <view class="ranking-wrap">
+          <navigator class="ranking-detail" wx:for="{{renkingList}}" wx:key="id" wx:for-item="item" url="/pages/renking/renking?id={{item.id}}">
+            <image src="{{item.coverImgUrl}}" />
+            <view>
+              <view wx:for="{{item.tracks}}" wx:key="first" wx:for-index="index" wx:for-item="item2">
+                {{index+1}}. {{item2.first}} - {{item2.second}}
+              </view>
+            </view>
+          </navigator>
         </view>
       </view>
-    </navigator>
+      <view id="demo2" class="scroll-view-item_H demo-text-2">
+        <scroll-view scroll-y="true" class="ranking-wrap">
+          <navigator class="ranking-detail2" wx:for="{{renkingMore}}" wx:key="id" wx:for-item="item" url="/pages/renking/renking?id={{item.id}}">
+            <image src="{{item.coverImgUrl}}" />
+          </navigator>
+        </scroll-view>
+      </view>
+    </scroll-view>
   </view>
 </view>
