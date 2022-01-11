@@ -8,6 +8,20 @@ Page({
     nickName: "",
     avatarUrl: "",
   },
+  onLoad(){
+    let that = this
+    wx.getStorage({
+      key:"userInfo",
+      success(res){
+        console.log(res);
+        let {avatarUrl,nickName} = res.data
+        that.setData({
+          nickName,
+          avatarUrl,
+        });
+      }
+    })
+  },
   onShow() {
     this.getRanking();
   },
@@ -40,7 +54,25 @@ Page({
           nickName,
           avatarUrl,
         });
+        wx.setStorage({
+          key:"userInfo",
+          data:{nickName,avatarUrl}
+        })
       },
     });
+  },
+  // 退出登陆
+  outLogin(){
+    let that = this
+    wx.removeStorage({
+      key: 'userInfo',
+      success () {
+        that.setData({
+          avatarUrl:"",
+          nickName:""
+        })
+        wx.showToast({title:"退出登陆成功",icon:"none"}) 
+      }
+    })
   },
 });

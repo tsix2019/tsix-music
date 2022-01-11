@@ -8,7 +8,8 @@
       <view class="login-status">{{nickName?nickName:'未登录'}}</view>
     </view>
     <view class="login-right">
-      <view bindtap="goLogin">立即登录</view>
+      <view bindtap="goLogin" wx:if="{{!nickName}}">立即登录</view>
+      <view bindtap="outLogin" wx:else>退出登陆</view>
     </view>
   </view>
   <!-- 搜索 -->
