@@ -25,6 +25,17 @@
 }
 .renking .bg-wrap .info .title {
   font-size: 45rpx;
+  display: -webkit-box;
+  /*设置为弹性盒子*/
+  -webkit-line-clamp: 1;
+  /*最多显示5行*/
+  overflow: hidden;
+  /*超出隐藏*/
+  text-overflow: ellipsis;
+  /*超出显示为省略号*/
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  /*强制英文单词自动换行*/
 }
 .renking .bg-wrap .info .rc {
   display: flex;
@@ -41,6 +52,12 @@
   color: #ddd;
   font-size: 24rpx;
   width: 300rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 .renking .renking-detail {
   width: 100%;
