@@ -1,2 +1,9 @@
 <!-- pages/playPage/playPage.wxml -->
-<view></view>
+<view class="play-page">
+  <view class="time">
+    <button bindtap="start">开始</button>
+    <button bindtap="pause">暂停</button>
+    <button bindtap="playPrev">上一首</button>
+    <button bindtap="playNext">下一首</button>
+  </view>
+</view>

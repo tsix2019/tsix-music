@@ -66,4 +66,21 @@ Page({
     this.setData({ page: this.data.page++ });
     this.getMusicDetailList();
   },
+    // 点击一首歌曲
+    handAMusic(musicInfo){
+      console.log(musicInfo);
+      let playList = musicInfo.currentTarget.dataset.item
+      console.log(playList);
+      let {name,id} = playList
+      // 搜索歌曲的暂时拿不到 picUrl
+      let picUrl = "http://p3.music.126.net/i7btfKrcPQvuP66vkEvrhQ==/109951166903496674.jpg"
+      const playAllList = [[id,name,picUrl]]
+      console.log(playAllList);
+      wx.navigateTo({
+        url:'/pages/playPage/playPage',
+        success:function(res){
+          res.eventChannel.emit('openPlay',{data:playAllList})
+        }
+      })
+    },
 });

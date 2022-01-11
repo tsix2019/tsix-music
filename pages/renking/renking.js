@@ -42,5 +42,35 @@ Page({
     }catch(err){
       console.log(err);
     }
+  },
+  // 点击一首歌曲
+  handAMusic(musicInfo){
+    let playList = musicInfo.currentTarget.dataset.item
+    console.log(playList);
+    let {name,id,al:{picUrl}} = playList
+    console.log(name);
+    const playAllList = [[id,name,picUrl]]
+    console.log(playAllList);
+    wx.navigateTo({
+      url:'/pages/playPage/playPage',
+      success:function(res){
+        res.eventChannel.emit('openPlay',{data:playAllList})
+      }
+    })
+  },
+  // 点击播放全部
+  playAll(){
+    let {tracks} = this.data.rankingInfo
+    // 播放全部 把name picUrl 和 id 提取出来
+    const playAllList = []
+    tracks.forEach(item=>{
+      playAllList.push([item.id,item.name,item.al.picUrl])
+    })
+    wx.navigateTo({
+      url:'/pages/playPage/playPage',
+      success:function(res){
+        res.eventChannel.emit('openPlay',{data:playAllList})
+      }
+    })
   }
 })

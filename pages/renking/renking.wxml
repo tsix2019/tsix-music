@@ -2,7 +2,7 @@
 <view class="renking">
   <navBar backImgUrl="{{rankingInfo.coverImgUrl}}" />
   <view class="bg-wrap">
-    <view style="background:url({{rankingInfo.coverImgUrl}})" src="{{}}" class="bg-img" />
+    <view style="background:url({{rankingInfo.coverImgUrl}})" class="bg-img" />
     <image src="{{rankingInfo.coverImgUrl}}" class="logo" />
     <view class="info">
       <view class="title">{{rankingInfo.name}}</view>
@@ -14,12 +14,12 @@
     </view>
   </view>
   <view class="renking-detail">
-    <view class="play-wrap">
+    <view class="play-wrap" bindtap="playAll">
       <i class="iconfont icon-24gf-playCircle"></i>
       播放全部
       <block>(共{{rankingInfo.trackCount}}首)</block>
     </view>
-    <navigator class="music-wrap" wx:for="{{rankingInfo.tracks}}" wx:for-item="item" wx:key="id" url="/pages/playPage/playPage?id={{item.id}}&name={{item.name}}">
+    <view class="music-wrap" wx:for="{{rankingInfo.tracks}}" wx:for-item="item" wx:key="id" bindtap="handAMusic" data-item="{{item}}">
       <view class="music-info">
         <view class="music-name">{{item.name}}</view>
         <view class="sing-name">
@@ -30,6 +30,6 @@
         </view>
       </view>
       <i class="iconfont icon-bofang"></i>
-    </navigator>
+    </view>
   </view>
 </view>
