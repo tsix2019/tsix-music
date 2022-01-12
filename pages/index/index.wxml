@@ -15,9 +15,18 @@
   <!-- 搜索 -->
   <searchInput></searchInput>
   <!-- 图片 bnnner -->
-  <view class="banner">
+  <!-- TODO: 点击轮播图片实现跳转网页，个人小程序似乎不行 -->
+  <swiper class="banner" indicator-dots autoplay easing-function="linear" indicator-active-color="#fff">
+    <block wx:for="{{bannersList}}" wx:for-item="item" wx:key="bannerId">
+      <swiper-item class="banner-item">
+        <image class="banner-img" src="{{item.pic}}" />
+        <!-- <view class="banner-title">{{item.typeTitle}}</view> -->
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- <view class="banner">
     <image src="../../static/img/banner.jpg" />
-  </view>
+  </view> -->
   <!-- 左右滑动分页 -->
   <view class="page-section-spacing">
     <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">

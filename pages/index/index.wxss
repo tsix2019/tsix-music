@@ -88,8 +88,12 @@
   margin-top: 30rpx;
   display: flex;
   justify-content: center;
-}
-.container .banner image {
-  border-radius: 10rpx;
   height: 250rpx;
+}
+.container .banner .banner-item {
+  border-radius: 10rpx;
+}
+.container .banner .banner-item .banner-img {
+  height: 250rpx;
+  overflow: hidden;
 }

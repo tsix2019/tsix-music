@@ -7,6 +7,7 @@ Page({
     renkingMore:[],
     nickName: "",
     avatarUrl: "",
+    bannersList:["1","2","3"]
   },
   onLoad(){
     let that = this
@@ -23,7 +24,23 @@ Page({
     })
   },
   onShow() {
+    this.getBanner();
     this.getRanking();
+  },
+  // 获取banner图片
+  async getBanner(){
+    try{
+      const data = await request({
+        url:"/banner?type=2"  // type = 2 表示安卓
+      });
+      if(data&&data.code=== 200){
+        this.setData({
+          bannersList : data.banners
+        })
+      }
+    }catch(err){
+      console.log(err);
+    }
   },
   // 获取热榜
   async getRanking() {

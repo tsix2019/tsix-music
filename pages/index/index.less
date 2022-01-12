@@ -43,6 +43,7 @@
 
     .scroll-view_H {
       white-space: nowrap;
+
       .scroll-view-item_H {
         display: inline-block;
         width: 100%;
@@ -53,6 +54,7 @@
         .ranking-wrap {
           height: 65vh;
           white-space: normal;
+
           .ranking-detail {
             margin-top: 20rpx;
             display: flex;
@@ -84,9 +86,11 @@
             }
 
           }
-          .ranking-detail2{
+
+          .ranking-detail2 {
             display: inline-block;
-            image{
+
+            image {
               width: 12vh;
               height: 12vh;
               border-radius: 8px;
@@ -104,10 +108,28 @@
     margin-top: 30rpx;
     display: flex;
     justify-content: center;
-
-    image {
+    height: 250rpx;
+    .banner-item {
       border-radius: 10rpx;
-      height: 250rpx;
+      .banner-img {
+        height: 250rpx;
+        overflow: hidden;
+      }
+
+      .banner-title {
+        // position: absolute;
+        // bottom: 50rpx;
+        // right: 10rpx;
+        // color: #fff;
+        // background-color: rgba(128,128,128,.3);
+      }
     }
+
   }
 }
+
+// 设置轮播图 指示点的位置
+// .wx-swiper-dots {
+//   position: relative;
+//   bottom: 60rpx !important;
+// }
