@@ -1,9 +1,47 @@
 <!-- pages/playPage/playPage.wxml -->
 <view class="play-page">
-  <view class="time">
-    <button bindtap="start">开始</button>
-    <button bindtap="pause">暂停</button>
-    <button bindtap="playPrev">上一首</button>
-    <button bindtap="playNext">下一首</button>
+  <view style="background-image:url({{songInfo[0].al.picUrl}})" class="bg"></view>
+  <!-- 音乐播放 -->
+  <view class="music-play">
+    <image src="{{songInfo[0].al.picUrl}}" class="music-img" />
+  </view>
+  <!-- 歌词 -->
+  <view class="music-control">
+    <!-- 进度条 -->
+    <view class="slider">
+      <slider value="{{sliderValue}}" bindchange="bindchange" block-size="16" activeColor="#fff" backgroundColor="#ccc" />
+      <!-- 当前播放时间 总时间 -->
+      <view class="slider-time">
+        <view>{{currentTime}}</view>
+        <view>{{musicTime}}</view>
+      </view>
+    </view>
+    <!-- 控制播放、暂停 -->
+    <view class="time">
+      <!-- 喜欢 -->
+      <view>
+        <i class="iconfont icon-xihuan"></i>
+      </view>
+      <!-- 上一首 -->
+      <view bindtap="playPrev">
+        <i class="iconfont icon-shangyishou"></i>
+      </view>
+      <!-- 播放 -->
+      <view bindtap="start" wx:if="{{!playState}}">
+        <i class="iconfont icon-shipinbofangshibofang"></i>
+      </view>
+      <!-- 暂停 -->
+      <view bindtap="pause" wx:else>
+        <i class="iconfont icon-zanting"></i>
+      </view>
+      <!-- 下一首 -->
+      <view bindtap="playNext">
+        <i class="iconfont icon-xiayishou"></i>
+      </view>
+      <!-- 播放列表 -->
+      <view>
+        <i class="iconfont icon-liebiao"></i>
+      </view>
+    </view>
   </view>
 </view>

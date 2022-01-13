@@ -37,12 +37,6 @@
           "scene": null
         },
         {
-          "name": "音乐播放页",
-          "pathName": "pages/playPage/playPage",
-          "query": "id=1909955412&name=%E4%BB%8E%E9%82%A3%E5%A4%A9%E8%B5%B7",
-          "scene": null
-        },
-        {
           "name": "播放 世间美好与你环环相扣",
           "pathName": "pages/playPage/playPage",
           "query": "id=1363948882&name=%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3",

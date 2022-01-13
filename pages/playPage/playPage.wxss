@@ -1,0 +1,48 @@
+.play-page .bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vh;
+  height: 100vh;
+  filter: blur(5px);
+  z-index: -1;
+}
+.play-page .music-play {
+  display: flex;
+  justify-content: center;
+}
+.play-page .music-play .music-img {
+  margin-top: 100rpx;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+}
+.play-page .music-control {
+  position: absolute;
+  bottom: 90rpx;
+  left: 0;
+  right: 0;
+}
+.play-page .music-control .slider {
+  margin: 0 auto 70rpx auto;
+  width: 80%;
+}
+.play-page .music-control .slider slider {
+  margin: 0;
+}
+.play-page .music-control .slider .slider-time {
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+}
+.play-page .music-control .time {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+.play-page .music-control .time view .icon-liebiao {
+  color: #ccc;
+}
+.play-page .music-control .time view .icon-xihuan {
+  color: #ccc;
+}
