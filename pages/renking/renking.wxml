@@ -3,7 +3,18 @@
   <navBar backImgUrl="{{rankingInfo.coverImgUrl}}" />
   <view class="bg-wrap">
     <view style="background:url({{rankingInfo.coverImgUrl}})" class="bg-img" />
-    <image src="{{rankingInfo.coverImgUrl}}" class="logo" />
+    <view class="logo">
+      <!-- 使用的是微信的脚本语言 wxs -->
+      <wxs module="m1">
+        var getFixNum = function(num){
+          var newNum = (num/1000000000).toFixed(1) + "亿"
+          return newNum
+        }
+        module.exports.getFixNum = getFixNum
+      </wxs>
+      <text>{{m1.getFixNum(rankingInfo.playCount)}}</text>
+      <image src="{{rankingInfo.coverImgUrl}}" />
+    </view>
     <view class="info">
       <view class="title">{{rankingInfo.name}}</view>
       <view class="rc">

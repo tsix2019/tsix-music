@@ -15,6 +15,14 @@
   z-index: -1;
 }
 .renking .bg-wrap .logo {
+  position: relative;
+}
+.renking .bg-wrap .logo text {
+  position: absolute;
+  top: 100rpx;
+  left: 235rpx;
+}
+.renking .bg-wrap .logo image {
   margin: 100rpx 50rpx 0 40rpx;
   width: 300rpx;
   height: 300rpx;
