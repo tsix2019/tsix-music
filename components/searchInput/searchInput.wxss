@@ -1,14 +1,15 @@
 .search-wrap {
   margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 40rpx;
+  height: 70rpx;
 }
-.search-wrap .iconfont {
+.search-wrap .mIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100rpx;
   height: 100rpx;
-  background-color: red;
-}
-.search-wrap .search-input {
-  padding-left: 70rpx;
-  height: 70rpx;
-  border-radius: 40rpx;
-  background-color: #f7f7f7;
 }
