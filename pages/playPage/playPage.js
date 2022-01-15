@@ -3,6 +3,7 @@ import {
   request
 } from "../../utils/request"
 import {formateTime} from '../../utils/formateTime'
+import {formatLyric} from '../../utils/formatLyric'
 const bgm = wx.getBackgroundAudioManager();
 Page({
 
@@ -18,6 +19,7 @@ Page({
     musicPlayTime:0,//音乐当前播放的时间
     musicTime:'0:00',// 音乐的时间
     currentTime:'0:00', // 已经播放的时间
+    lyric:'',// 处理过的歌词
   },
   onLoad: function (options) {
     const eventChannel = this.getOpenerEventChannel()
@@ -37,6 +39,10 @@ Page({
     // 监听bgm的播放
     bgm.onTimeUpdate(()=>{
       let {currentTime,duration} = bgm // 当前播放的时间
+      let {lyric} = this.data
+      // currentTime = parseFloat(currentTime.toFixed(3))
+      // TODO: 歌词还没有完成
+      // console.log(this.data.lyric
       // 当前播放的进度 进度条 总的秒/当前秒
       let sliderValue = (currentTime / duration) * 100
       currentTime = formateTime(currentTime)
@@ -130,6 +136,22 @@ Page({
         name = songs[0].name
         this.setData({
           songInfo : songs
+        })
+      }
+    }catch(err){
+      console.log(err);
+    }
+    // 获取歌词
+    try{
+      const data = await request({
+        url:'/lyric?id='+id
+      })
+      if(data&&data.code===200){
+        let {lyric} = data.lrc
+        // 借助外部函数 处理一下歌词
+        lyric = formatLyric(lyric)
+        this.setData({
+          lyric
         })
       }
     }catch(err){
