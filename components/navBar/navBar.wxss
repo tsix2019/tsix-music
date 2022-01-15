@@ -48,7 +48,8 @@
 }
 .nav-bar {
   position: fixed;
-  height: 140rpx;
+  display: flex;
+  align-items: center;
   z-index: 3;
   background-color: #ccc;
   top: 0;
@@ -56,19 +57,22 @@
   right: 0;
 }
 .nav-bar .icon-wrap {
-  margin-top: 60rpx;
-  margin-left: 20rpx;
-  width: 130rpx;
-  height: 60rpx;
-  padding: 0 23rpx;
+  width: 84px;
+  height: 30px;
   border-radius: 35rpx;
-  background-color: rgba(51, 51, 51, 0.4);
+  background-color: rgba(0, 0, 0, 0.15);
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   color: #fff;
 }
 .nav-bar .icon-wrap .iconfont {
   display: inline-block;
   font-size: 38rpx;
+}
+.nav-bar .title {
+  color: #fff;
+  width: 55%;
+  text-align: center;
 }

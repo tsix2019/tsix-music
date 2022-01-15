@@ -1,5 +1,6 @@
 <!-- pages/playPage/playPage.wxml -->
 <view class="play-page">
+  <navBar backImgUrl="{{songInfo[0].al.picUrl}}" musicName="{{songInfo[0].name}}" singer="{{songInfo[0].ar}}" />
   <view style="background-image:url({{songInfo[0].al.picUrl}})" class="bg"></view>
   <!-- 音乐播放 -->
   <view class="music-play">

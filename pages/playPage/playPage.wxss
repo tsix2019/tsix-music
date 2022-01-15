@@ -12,7 +12,7 @@
   justify-content: center;
 }
 .play-page .music-play .music-img {
-  margin-top: 100rpx;
+  margin-top: 204rpx;
   width: 400rpx;
   height: 400rpx;
   border-radius: 20rpx;

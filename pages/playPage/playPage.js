@@ -5,6 +5,7 @@ import {
 import {formateTime} from '../../utils/formateTime'
 import {formatLyric} from '../../utils/formatLyric'
 const bgm = wx.getBackgroundAudioManager();
+const app = getApp()
 Page({
 
   data: {
@@ -137,6 +138,7 @@ Page({
         this.setData({
           songInfo : songs
         })
+        app.globalData.songInfo = songs
       }
     }catch(err){
       console.log(err);
@@ -174,4 +176,8 @@ Page({
       musicAUnitTime
     })
   },
+  onUnload(){
+    // 当页面关闭时，把音乐信息给全局data
+    
+  }
 })
