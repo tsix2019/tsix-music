@@ -23,6 +23,9 @@ Component({
     },
     singer:{
       type:Array
+    },
+    rankingName:{
+      type:String
     }
   },
 

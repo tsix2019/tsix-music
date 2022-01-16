@@ -9,12 +9,13 @@ export const request = (params) => {
   // }
   ajaxTimes++
   //显示加载中 效果
-  wx.showLoading({
-    title: '加载中',
+  wx.showToast({
+    title: '加载中...',
+    icon:'none',
     mask:true
   })
   //定义公共的url
-  const baseUrl = 'http://192.168.183.135:3000';
+  const baseUrl = 'http://192.168.7.135:3000';
   return new Promise((resolve, reject) => {
     wx.request({
       ...params,
@@ -30,7 +31,7 @@ export const request = (params) => {
         ajaxTimes--
         if(ajaxTimes ===0){
           //关闭等待loading
-          wx.hideLoading()
+          wx.hideToast()
         }      }
     })
   })

@@ -1,6 +1,6 @@
 <!-- pages/renking/renking.wxml -->
 <view class="renking">
-  <navBar backImgUrl="{{rankingInfo.coverImgUrl}}" />
+  <navBar backImgUrl="{{rankingInfo.coverImgUrl}}" rankingName="{{rankingName}}" />
   <view class="bg-wrap">
     <view style="background:url({{rankingInfo.coverImgUrl}})" class="bg-img" />
     <view class="logo">
@@ -43,4 +43,5 @@
       <i class="iconfont icon-bofang"></i>
     </view>
   </view>
+  <playControl class="play-control" />
 </view>

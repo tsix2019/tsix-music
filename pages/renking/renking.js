@@ -9,7 +9,8 @@ Page({
    */
   data: {
     rankingInfo:{},
-    rankingDetailList:[]
+    rankingDetailList:[],
+    rankingName:'', // 热榜的名字，传给navBar组件
   },
 
   /**
@@ -72,5 +73,22 @@ Page({
         res.eventChannel.emit('openPlay',{data:playAllList})
       }
     })
+  },
+  // onPageScroll 当屏幕滚动
+  onPageScroll:function(e){
+    // console.log(e); // 220px = bg-wrap 滚动
+    // 当滚动距离覆盖住bg-wrap navbar 就显示榜单名字
+    if(e.scrollTop >= 220){
+      if(this.data.rankingName) return  // 当榜单的nav名字不空时，就不必要执行setData
+      let {name} = this.data.rankingInfo
+      this.setData({
+        rankingName:name
+      })
+    }else{
+      if(!this.data.rankingName) return
+      this.setData({
+        rankingName:''
+      })
+    }
   }
 })
