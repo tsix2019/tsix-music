@@ -41,6 +41,12 @@
           "pathName": "pages/playPage/playPage",
           "query": "id=1363948882&name=%E4%B8%96%E9%97%B4%E7%BE%8E%E5%A5%BD%E4%B8%8E%E4%BD%A0%E7%8E%AF%E7%8E%AF%E7%9B%B8%E6%89%A3",
           "scene": null
+        },
+        {
+          "name": "log",
+          "pathName": "pages/logs/logs",
+          "query": "",
+          "scene": null
         }
       ]
     }

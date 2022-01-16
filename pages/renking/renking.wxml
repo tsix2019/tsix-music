@@ -24,7 +24,7 @@
       <view class="introduce">{{rankingInfo.description}}</view>
     </view>
   </view>
-  <view class="renking-detail">
+  <view class="renking-detail" style="{{showPlayControl?'margin-bottom:142rpx':''}}">
     <view class="play-wrap" bindtap="playAll">
       <i class="iconfont icon-24gf-playCircle"></i>
       播放全部
@@ -43,5 +43,5 @@
       <i class="iconfont icon-bofang"></i>
     </view>
   </view>
-  <playControl class="play-control" />
+  <playControl class="play-control" wx:if="{{showPlayControl}}"/>
 </view>

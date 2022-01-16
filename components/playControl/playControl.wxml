@@ -1,0 +1,30 @@
+<view class="play-control" bind:tap="goPlayPage">
+  <!-- 音乐头像 -->
+  <view class="music-logo">
+    <image src="{{songInfo.al.picUrl}}" />
+  </view>
+  <!-- 歌曲信息 -->
+  <view class="music-info">
+    <view class="music-name">
+      <text>{{songInfo.al.name}}</text>
+      <text>-</text>
+      <text wx:for="{{songInfo.ar}}" wx:for-item="item" wx:key="id">{{item.name}}</text>
+    </view>
+    <!-- 暂停 -->
+    <view class="icon">
+      <!-- catchtap 可以阻止事件冒泡 -->
+      <image src="/static/img/bofang.png" catchtap="start" wx:if="{{!playState}}" />
+      <image src="/static/img/zanting.png" catchtap="pause" wx:else />
+    </view>
+    <!-- 进度条 -->
+    <view class="schedule">
+      <!-- 进度条 -->
+      <slider value="{{sliderValue}}" block-size="16" activeColor="#fff" backgroundColor="#666" />
+      <!-- 播放时间 -->
+      <view class="time">
+        <text>{{currentTime}}</text>
+        <text>{{duration}}</text>
+      </view>
+    </view>
+  </view>
+</view>

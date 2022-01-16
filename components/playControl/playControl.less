@@ -1,0 +1,50 @@
+/* components/playControl/playControl.wxss */
+.play-control{
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  .music-logo{
+    image{
+      width: 96rpx;
+      height: 96rpx;
+      border-radius: 50%;
+      margin-left: 15rpx;
+      background-color: #ccc;
+      animation: rotate 10s linear infinite;
+    }
+  }
+  .music-info{
+    margin-left: 18px;
+    width: 100%;
+    .music-name{
+      // width: 100%;
+
+    }
+    .icon{
+      float: right;
+      margin-right: 10px;
+      image{
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .schedule{
+      width: 80%;
+      slider{
+        margin: 0;
+      }
+      .time{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+@keyframes rotate{
+	0%{
+		transform: rotateZ(0deg);/*从0度开始*/
+	}
+	100%{
+		transform: rotateZ(360deg);/*360度结束*/
+	}
+}

@@ -2,6 +2,7 @@
 import {
   request
 } from "../../utils/request"
+const bgm = wx.getBackgroundAudioManager()
 Page({
 
   /**
@@ -10,6 +11,7 @@ Page({
   data: {
     rankingInfo:{},
     rankingDetailList:[],
+    showPlayControl:false,// 是否展示底部的播放控制
     rankingName:'', // 热榜的名字，传给navBar组件
   },
 
@@ -27,6 +29,19 @@ Page({
     })
     let {id} = options
     this.getRenkingDetail(id)
+  },
+  onShow: function(){
+    // 判断bgm里面的一个值，如果有的话就显示底部的播放控制
+    console.log(bgm);
+    if(bgm.src){
+      this.setData({
+        showPlayControl : true
+      })
+    }else{
+      this.setData({
+        showPlayControl : false
+      })
+    }
   },
   async getRenkingDetail(id){
     try{

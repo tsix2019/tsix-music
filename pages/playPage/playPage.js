@@ -48,6 +48,14 @@ Page({
       let sliderValue = (currentTime / duration) * 100
       currentTime = formateTime(currentTime)
       this.setData({currentTime,sliderValue})
+    }),
+    // 监听bgm需要停下来加载
+    bgm.onError(()=>{
+      wx.showToast({
+        title:"加载中,很快就好...",
+        icon:"icon",
+        mask:"false"
+      })
     })
   },
   async getMusicPlay(idStr, name) {
