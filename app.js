@@ -14,6 +14,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    coderName : '唐勇军',
+    songInfo:[]
   }
 })

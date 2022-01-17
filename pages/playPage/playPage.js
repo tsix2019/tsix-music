@@ -21,6 +21,7 @@ Page({
     musicTime:'0:00',// 音乐的时间
     currentTime:'0:00', // 已经播放的时间
     lyric:'',// 处理过的歌词
+    lyricIndex:0,// 当前歌词的下标
   },
   onLoad: function (options) {
     const eventChannel = this.getOpenerEventChannel()
@@ -40,10 +41,23 @@ Page({
     // 监听bgm的播放
     bgm.onTimeUpdate(()=>{
       let {currentTime,duration} = bgm // 当前播放的时间
-      let {lyric} = this.data
-      // currentTime = parseFloat(currentTime.toFixed(3))
+      let {lyric,lyricIndex} = this.data
+      currentTime = parseInt(currentTime)
+      // 查找当前播放时间，在歌词里面时间的 index，false会返回-1，其他的正常返回lyric数组的index
+      let index = lyric.findIndex(item=>{
+        if(item.time === currentTime){
+          return item
+        }
+      })
+      // 如果index 为false && lyricIndex 重复 跳出去，避免重复设置data
+      if(index !== -1 && lyricIndex !== index){
+        this.setData({
+          lyricIndex:index
+        })
+      }
+      // console.log(currentTime);
       // TODO: 歌词还没有完成
-      // console.log(this.data.lyric
+      // console.log(this.data.lyric)
       // 当前播放的进度 进度条 总的秒/当前秒
       let sliderValue = (currentTime / duration) * 100
       currentTime = formateTime(currentTime)

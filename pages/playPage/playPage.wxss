@@ -18,6 +18,20 @@
   border-radius: 20rpx;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.18);
 }
+.play-page .lyrics {
+  margin-top: 60rpx;
+  justify-content: center;
+  text-align: center;
+}
+.play-page .lyrics view {
+  color: #ccc;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.play-page .lyrics .second-lyric {
+  color: #fff;
+  font-size: 36rpx;
+}
 .play-page .music-control {
   position: absolute;
   bottom: 90rpx;

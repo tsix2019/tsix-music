@@ -7,6 +7,12 @@
     <image src="{{songInfo[0].al.picUrl}}" class="music-img" />
   </view>
   <!-- 歌词 -->
+  <view class="lyrics">
+    <view class="first-lyric">{{lyric[lyricIndex-1].text}}</view>
+    <view class="second-lyric">{{lyric[lyricIndex].text}}</view>
+    <view class="third-lyric">{{lyric[lyricIndex+1].text}}</view>
+    <view class="fourth-lyric">{{lyric[lyricIndex+2].text}}</view>
+  </view>
   <view class="music-control">
     <!-- 进度条 -->
     <view class="slider">

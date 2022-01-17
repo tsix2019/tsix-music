@@ -19,11 +19,10 @@ export const formatTimeToNumber = (timeString) => {
   if (timeString) {
 
   const splitArr = timeString.split(":").map((item) => Number(item));
-
-  return splitArr[0] * 60 + splitArr[1];
+  // 歌词时间取整，不然不好匹配
+  return parseInt(splitArr[0] * 60 + splitArr[1]);
 
   }
-
   return time;
 
 };
