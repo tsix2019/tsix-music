@@ -42,7 +42,7 @@ Component({
     },
   },
   created(){
-    this.pageLifetimes().show()
+    
   },
   /**
    * 组件的初始数据
