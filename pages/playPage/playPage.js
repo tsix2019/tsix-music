@@ -187,16 +187,20 @@ Page({
     wx.setNavigationBarTitle({
       title: name
     })
-    let musicLenth = bgm.duration
-    let musicTime = formateTime(musicLenth)
-    // 计算1%进度条的时间
-    let musicAUnitTime =  musicLenth/100
-    this.setData({
-      playState: 1,
-      musicLenth,
-      musicTime,
-      musicAUnitTime
-    })
+    let that = this
+    // 这里不延迟一下，小程序捕捉不到歌曲的总时长
+    setTimeout(()=>{
+      let musicLenth = bgm.duration
+      let musicTime = formateTime(musicLenth)
+      // 计算1%进度条的时间
+      let musicAUnitTime =  musicLenth/100
+      that.setData({
+        playState: 1,
+        musicLenth,
+        musicTime,
+        musicAUnitTime
+      })
+    },1000)
   },
   onUnload(){
     // 当页面关闭时，把音乐信息给全局data

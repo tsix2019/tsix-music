@@ -9,8 +9,9 @@ Component({
   properties: {
 
   },
-  pageLifetimes:{
-    show: function() {
+  lifetimes:{
+    // 组件进入节点树时执行
+    attached:function(){
       this.setData({
         songInfo:app.globalData.songInfo[0]
       })
@@ -33,11 +34,15 @@ Component({
           mask:"false"
         })
       })
+    }
+  },
+  pageLifetimes:{
+    show: function() {
+
     },
   },
   created(){
-
-    console.log('aaa');
+    this.pageLifetimes().show()
   },
   /**
    * 组件的初始数据
