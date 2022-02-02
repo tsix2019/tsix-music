@@ -1,0 +1,17 @@
+<view class="song-review">
+  <view class="comments">
+    <view class="comments-item" wx:for="{{songReview}}" wx:for-item="item" wx:key="commentId">
+      <image src="{{item.user.avatarUrl}}" />
+      <view class="detail">
+        <view class="user-name">{{item.user.nickname}}</view>
+        <view class="time">{{item.timeStr}}</view>
+        <view class="content">{{item.content}}</view>
+      </view>
+      <!-- 点赞的数量 -->
+      <view class="count">
+        <i class="iconfont icon-icon"></i>
+        <view class="num">{{item.likedCount}}</view>
+      </view>
+    </view>
+  </view>
+</view>

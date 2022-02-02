@@ -22,6 +22,8 @@ Page({
     currentTime:'0:00', // 已经播放的时间
     lyric:'',// 处理过的歌词
     lyricIndex:0,// 当前歌词的下标
+    touchmoveTop:0,// 向上滑动了多少px
+    showSongReview:false,
   },
   onLoad: function (options) {
     const eventChannel = this.getOpenerEventChannel()
@@ -201,6 +203,25 @@ Page({
         musicAUnitTime
       })
     },1000)
+  },
+  // 记录按住的第一个点
+  startClientY : 0,
+  touchstart(e){
+    this.startClientY = e.changedTouches[0].clientY
+    // console.log("startClientY",e.changedTouches[0].clientY);
+  },
+  // 按住移动
+  touchmove(e){
+    console.log(e);
+    if(!(this.data.showSongReview)){
+      this.setData({
+        showSongReview:true
+      })
+    }
+    // console.log(-(e.changedTouches[0].clientY - this.startClientY)); // 获取按住上滑了多少px 上滑得到的是负数
+    this.setData({
+      touchmoveTop:-(e.changedTouches[0].clientY - this.startClientY)
+    })
   },
   onUnload(){
     // 当页面关闭时，把音乐信息给全局data

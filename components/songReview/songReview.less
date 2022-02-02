@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3126827 */
+  src: url('//at.alicdn.com/t/font_3126827_jsyt61ouuxj.woff2?t=1642580264203') format('woff2'),
+       url('//at.alicdn.com/t/font_3126827_jsyt61ouuxj.woff?t=1642580264203') format('woff'),
+       url('//at.alicdn.com/t/font_3126827_jsyt61ouuxj.ttf?t=1642580264203') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-icon:before {
+  content: "\e651";
+}
+
+
+.song-review{
+  // position: fixed;
+  position: absolute;
+  top: 180rpx;
+  // background-color: #ccc;
+  background-color: #fff;
+  width: 100vh;
+  .comments{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    .comments-item{
+      display: flex;
+      align-items: center;
+      margin: 10rpx 0; 
+      .detail{
+        width: 31%;
+        margin-top: 10rpx;
+        border-bottom: 1px solid #ccc;
+        .user-name{
+          font-size: 34rpx;
+          color: #666;
+        }
+        .time{
+          color: #999;
+        }
+        .content{
+          margin-top: 10rpx;
+        }
+      }
+      .count{
+        .iconfont{
+          display: flex;
+          justify-content: flex-end;
+          font-size: 50rpx;
+        }
+        .num{
+
+        }
+      }
+      image{
+        width: 90rpx;
+        height: 90rpx;
+        margin: 0 20rpx;
+        border-radius: 45px;
+      }
+    }
+  }
+}

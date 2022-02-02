@@ -1,5 +1,5 @@
 <!-- pages/playPage/playPage.wxml -->
-<view class="play-page">
+<view class="play-page" bind:touchmove="touchmove" bind:touchstart="touchstart">
   <navBar backImgUrl="{{songInfo[0].al.picUrl}}" musicName="{{songInfo[0].name}}" singer="{{songInfo[0].ar}}" />
   <view style="background-image:url({{songInfo[0].al.picUrl}})" class="bg"></view>
   <!-- 音乐播放 -->
@@ -51,4 +51,7 @@
       </view>
     </view>
   </view>
+  <!-- 评论 -->
+  <!-- <songReview touchmoveTop="{{touchmoveTop}}" musicId="{{songInfo[0].id}}" wx:if="{{showSongReview}}" /> -->
+  <songReview musicId="{{songInfo[0].id}}" wx:if="{{showSongReview}}" />
 </view>
