@@ -1,0 +1,121 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/2/5 下午9:16:02
+使用方法：
+在 /Users/tsix/WeChatProjects/TsixMusic/pages/musicListDetail/musicListDetail.wxml 引入模板
+
+```
+<import src="musicListDetail.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 /Users/tsix/WeChatProjects/TsixMusic/pages/musicListDetail/musicListDetail.wxss 中引入样式
+```
+@import "./musicListDetail.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="music-list-detail">
+      <view is="components/searchInput/searchInput">
+        <navigator class="searchInput--search-wrap">
+          <icon class="searchInput--mIcon sk-image" color="#EFEFEF" size="26" type="search"></icon>
+          <view class="searchInput--search-input sk-image" placeholder="搜索歌曲"></view>
+        </navigator>
+      </view>
+      <view class="music-list">
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-321 sk-text">孤勇者</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-251 sk-text">
+              陈奕迅
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-337 sk-text">孤勇者</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-214 sk-text">
+              柯乐
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-871 sk-text">孤勇者</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-812 sk-text">
+              故里
+            </view>
+            <view class="sing-name sk-transparent sk-text-14-2857-693 sk-text">
+              翻唱
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-404 sk-text">孤勇者</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-89 sk-text">
+              Sue
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-185 sk-text">白月光</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-694 sk-text">
+              孤勇者
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-354 sk-text">孤勇者 (抖音版)</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-787 sk-text">
+              张可聿
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-900 sk-text">爱与你在心里长眠</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-918 sk-text">
+              孤勇者
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-453 sk-text">孤勇者</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-266 sk-text">
+              YJ
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-980 sk-text">Suddenly you can see but you can't hear</view>
+            <view class="sing-name sk-transparent sk-text-14-2857-770 sk-text">
+              孤勇者
+            </view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+        <view class="music-item" data-item="[object Object]" style="border: none;">
+          <view class="music-info">
+            <view class="music-name sk-transparent sk-text-14-2857-816 sk-text">suddenly can hear but can't see</view>
+          </view>
+          <i class="iconfont icon-bofang sk-pseudo sk-pseudo-circle"></i>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

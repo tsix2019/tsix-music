@@ -35,7 +35,6 @@
       "disablePlugins": [],
       "outputPath": ""
     },
-    "enableEngineNative": false,
     "useIsolateContext": false,
     "userConfirmedUseIsolateContext": true,
     "userConfirmedBundleSwitch": false,
@@ -45,7 +44,9 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "ignoreUploadUnusedFiles": true,
+    "skeletonGenerateFilesWithoutConfirm": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
