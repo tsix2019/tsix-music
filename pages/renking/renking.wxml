@@ -7,7 +7,7 @@
       <!-- 使用的是微信的脚本语言 wxs -->
       <wxs module="m1">
         var getFixNum = function(num){
-          var newNum = (num/1000000000).toFixed(1) + "亿"
+          var newNum = (num/100000000).toFixed(1) + "亿"
           return newNum
         }
         module.exports.getFixNum = getFixNum
@@ -43,5 +43,5 @@
       <i class="iconfont icon-bofang"></i>
     </view>
   </view>
-  <playControl class="play-control" wx:if="{{showPlayControl}}"/>
+  <playControl class="play-control" wx:if="{{showPlayControl}}" />
 </view>
