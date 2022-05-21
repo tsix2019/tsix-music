@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/login/login", 
+    "pages/login/verification/verification",
     "pages/renking/renking",
     "pages/playPage/playPage",
     "pages/search/search",

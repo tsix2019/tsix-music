@@ -1,0 +1,11 @@
+<!-- 登录页面 -->
+<view class="login">
+  <view class="txt">登录体验更多精彩</view>
+  <view class="ipt_wrap">
+    <view class="area_code">+86<i class="iconfont icon-xiala"></i></view>
+    <input class="phone" placeholder="请输入手机号" bindinput="inputPhone"/>
+    <!-- <input class="psd" /> -->
+  </view>
+  <button class="next" bindtap="next">下一步</button>
+  <view class="recover">找回账号</view>
+</view>
