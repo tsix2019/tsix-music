@@ -19,15 +19,21 @@
   display: flex;
   justify-content: space-between;
 }
-.verification .code_wrap input {
-  display: flex;
-  align-items: center;
+.verification .code_wrap .num_code {
+  color: red;
+  text-align: center;
   font-weight: 600;
   font-size: 26px;
-  justify-content: center;
+  font-family: PingFangSC-Medium;
   border-bottom: 2px solid #ccc;
   width: 45px;
   height: 45px;
+}
+.verification .code_wrap .hidden_ipt {
+  width: 0;
+  height: 0;
+  border: 0;
+  margin: 0;
 }
 .verification .no_phone {
   margin-top: 40px;
