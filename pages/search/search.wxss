@@ -60,6 +60,7 @@
 .search .search-hot .hot-music .hot-list .music-content {
   color: #bbb;
   font-size: 30rpx;
+  width: 300px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

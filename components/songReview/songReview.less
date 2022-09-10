@@ -23,37 +23,52 @@
   top: 180rpx;
   // background-color: #ccc;
   background-color: #fff;
-  width: 100vh;
   .comments{
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     .comments-item{
+      position: relative;
       display: flex;
       align-items: center;
       margin: 10rpx 0; 
       .detail{
-        width: 31%;
+        width: 80%;
         margin-top: 10rpx;
         border-bottom: 1px solid #ccc;
         .user-name{
-          font-size: 34rpx;
+          font-size: 30rpx;
           color: #666;
+          font-weight: 600;
         }
         .time{
+          font-size: 24rpx;
           color: #999;
+        }
+        .count{
+          color: #efefef;
+          opacity: .9;
+          border-radius: 26rpx;
+          height: 40rpx;
+          line-height: 40rpx;
+          position: absolute;
+          top: 5px;
+          right: 20rpx;
+          background-color: #ccc;
+          padding: 0 10rpx;
+          .iconfont{
+            font-size: 26rpx;
+            margin-right: 6rpx;
+          }
+          .num{
+            display: inline-block;
+            font-size: 24rpx;
+          }
+        }
+        .count:hover{
+          color: #dc001a;
         }
         .content{
           margin-top: 10rpx;
-        }
-      }
-      .count{
-        .iconfont{
-          display: flex;
-          justify-content: flex-end;
-          font-size: 50rpx;
-        }
-        .num{
-
         }
       }
       image{

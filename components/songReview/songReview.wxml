@@ -5,12 +5,12 @@
       <view class="detail">
         <view class="user-name">{{item.user.nickname}}</view>
         <view class="time">{{item.timeStr}}</view>
+        <!-- 点赞的数量 -->
+        <view class="count">
+          <i class="iconfont icon-icon"></i>
+          <view class="num">{{item.likedCount}}</view>
+        </view>
         <view class="content">{{item.content}}</view>
-      </view>
-      <!-- 点赞的数量 -->
-      <view class="count">
-        <i class="iconfont icon-icon"></i>
-        <view class="num">{{item.likedCount}}</view>
       </view>
     </view>
   </view>
