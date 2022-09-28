@@ -26,6 +26,9 @@ Component({
     },
     rankingName:{
       type:String
+    },
+    playPage:{
+      type: Boolean
     }
   },
 

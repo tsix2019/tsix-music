@@ -1,6 +1,6 @@
 <!-- components/navBar.wxml -->
 <view class="nav-bar" style="height: {{navHeight + 'px'}};">
-  <view style="background-image:url({{backImgUrl}})" class="bg-blur"></view>
+  <view style="background-image:url({{backImgUrl}});filter:{{playPage ? 'blur(5px)' : ''}}" class="bg-blur"></view>
   <view class="icon-wrap" style="margin-top:{{statusBarHeight+'px'}}">
     <i class="iconfont icon-fanhui" bindtap="goBack"></i>
     |

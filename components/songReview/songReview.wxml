@@ -1,4 +1,5 @@
 <view class="song-review">
+  <view bindtap="closeReview">close</view>
   <view class="comments">
     <view class="comments-item" wx:for="{{songReview}}" wx:for-item="item" wx:key="commentId">
       <image src="{{item.user.avatarUrl}}" />

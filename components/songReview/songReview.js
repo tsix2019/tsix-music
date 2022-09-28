@@ -45,5 +45,9 @@ Component({
         console.log(err);
       }
     },
+    // 关闭评论区
+    closeReview(){
+      this.triggerEvent('close',{name:'aaa'})
+    }
   }
 })

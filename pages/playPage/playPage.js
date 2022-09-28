@@ -223,6 +223,13 @@ Page({
       touchmoveTop:-(e.changedTouches[0].clientY - this.startClientY)
     })
   },
+  // 关闭评论区
+  closeReview(e){
+    console.log(e);
+    this.setData({
+      showSongReview:false
+    })
+  },
   onUnload(){
     // 当页面关闭时，把音乐信息给全局data
     

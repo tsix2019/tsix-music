@@ -43,5 +43,6 @@
       <i class="iconfont icon-bofang"></i>
     </view>
   </view>
+  <backTop wx:if="{{false}}"></backTop>
   <playControl class="play-control" wx:if="{{showPlayControl}}" />
 </view>
