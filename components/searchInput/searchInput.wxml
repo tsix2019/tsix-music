@@ -1,5 +1,0 @@
-<!-- components/searchInput/searchInput.wxml -->
-<navigator url="/pages/search/search" class="search-wrap">
-  <icon type="search" class="mIcon" size="52rpx" color="#737373" id="posadv" bindtap="handleSearch"></icon>
-  <input class="search-input" placeholder="搜索歌曲"></input>
-</navigator>

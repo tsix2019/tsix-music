@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "navBar": "/components/navBar/navBar",
-    "playControl":"/components/playControl/playControl",
-    "backTop": "/components/backTop/backTop"
-  },
-  "navigationStyle": "custom"
-}

@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "navBar": "/components/navBar/navBar",
-    "songReview": "/components/songReview/songReview"
-  },
-  "navigationStyle": "custom"
-}
